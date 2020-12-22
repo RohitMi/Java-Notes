@@ -13,75 +13,75 @@
  * 
  */
 import java.util.*;
-class SimpleMathFunc
+class MathFunc
 {
-    int addition(int a, int b)
+    int add(int a, int b)      //function for addition of integer numbers
     {
         int sum = a + b;
-        //System.out.println("Sum of the given number =" + sum);
         return sum;
     }
     
-    double addition(double a, double b)
+    double add(double a, double b)    //function for addition of floating point numbers
     {
         double sum = a + b;
-        //System.out.println("Sum of the given number =" + sum);
         return sum;
     }
     
-    int subtract(int a, int b)
+    int sub(int a, int b)       //function for subtraction of integer numbers
     {
-        int dif = a - b;
+        int dif = 0;
+        if(a>b)
+            dif = a - b;
+        else
+            dif = b - a;
         return dif;
     }
     
-    double subtract(double a, double b)
+    double sub(double a, double b)   //function for subtraction of floating point numbers
     {
         double dif = 0;
-        if(a>b){
-        dif = a - b;
-    }
-    else
-        dif = b - a;
+        if(a>b)
+            dif = a - b;
+        else
+            dif = b - a;
         return dif;
     }
     
-    int multiply(int a, int b)
+    int multiply(int a, int b)      //function for multiplication of integer number
     {
         int prod = a * b;
         return prod;
     }
     
-    double multiply(double a, double b)
+    double multiply(double a, double b)         //function for multiplication of floating point numbers
     {
         double prod = a * b;
         return prod;
     }
     
-    double division(double a, double b)
+    double division(double a, double b)         //function for division of numbers(gives qoutient)
     {
         double quot = a / b;
         return quot;
     }
     
-    int Remainder(int a, int b)
+    int Remainder(int a, int b)         //function for division of numbers(gives remainder)
     {
         int rem = a % b;
         return rem;
     }
     
-    double Power(double num, int p)
+    double Power(double num, int p)     //function to calculate powers of numbers
     {
         double power = 1;
         for(int i=1; i<=p; i++)
         {
             power = power * num;
         }
-        //System.out.println(power);
         return power;
     }
     
-    double SquareRoot(int number)
+    double SquareRoot(int number)       //function to calculate square root of a number
     {
     double temp;
     double sqrt = number / 2;
@@ -92,7 +92,7 @@ class SimpleMathFunc
     return sqrt;
     }
     
-    int factorial(int num)
+    int factorial(int num)          //function to calculate the factorial of number
     {
         int fact = 1;
         if (num == 0)
@@ -110,7 +110,7 @@ class SimpleMathFunc
         return fact;
     }
     
-    int HCF(int num1,int num2)
+    int HCF(int num1,int num2)      //function to calculate HCF of numbers
     {
        int temp;
        while(num2 > 0)
@@ -122,30 +122,19 @@ class SimpleMathFunc
        return num1; 
     }
     
-    int LCM(int num1, int num2)
+    int LCM(int num1, int num2)     //function to calculate LCM of number
     {
         int temp,i=2,res;
-    if(num1>num2)
-       res=num1;
-    else
-       res=num2;
-    temp=res;
-    while(res%num1!=0 || res%num2!=0)
-    {
-        res=temp*i;
-        i++;
-    }
-    return res;
-    }
-    
-    void main()
-    {
-        double num1 = 3.5;
-        int num2 = 6;
-        
-        System.out.println(subtract(num1,num2));
-        
-        
-        
+        if(num1>num2)
+            res=num1;
+        else
+            res=num2;
+        temp=res;
+        while(res%num1!=0 || res%num2!=0)
+        {
+            res=temp*i;
+            i++;
+        }
+        return res;
     }
 }
