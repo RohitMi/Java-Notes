@@ -22,18 +22,8 @@ class Calculator
     {   
         int num1, num2;
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter your choice according to the menu given below");
-        System.out.println("1. Enter '+' for addition");
-        System.out.println("2. Enter '-' for subtraction");
-        System.out.println("3. Enter '*' for multiplication");
-        System.out.println("4. Enter '/' for divison");
-        System.out.println("5. Enter '%' for remainder");
-        System.out.println("6. Enter '^' for power of a number");
-        System.out.println("7. Enter 'r' for square root of a number");
-        System.out.println("8. Enter 'f' for factorial of a number");
-        System.out.println("9. Enter 'h' for HCF of numbers");
-        System.out.println("10. Enter 'l' for LCM of numbers");
-        System.out.println("Enter your choice:");
+        menu.calMenu();
+        
         
         char ch = in.next().charAt(0);
         
