@@ -1,5 +1,6 @@
 /**
- * This code has methods for the following Mathematics calculations:
+ * The following MathFunc class contains method/function code for math operations.
+ * Following is the list of operations that can be performed:
  * Addition
  * Subtraction
  * Multiplication
@@ -101,7 +102,7 @@ class MathFunc
             return 1;
     }
     
-    public static int HCF(int num1,int num2)      //function to calculate HCF of numbers
+    public static int hcf(int num1,int num2)      //function to calculate HCF of numbers
     {
        int temp;
        while(num2 > 0)
@@ -113,7 +114,7 @@ class MathFunc
        return num1; 
     }
     
-    public static int LCM(int num1, int num2)     //function to calculate LCM of number
+    public static int lcm(int num1, int num2)     //function to calculate LCM of number
     {
         int temp,i=2,res;
         if(num1>num2)
