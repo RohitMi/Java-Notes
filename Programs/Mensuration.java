@@ -1,3 +1,29 @@
+/**
+ * The following Mensuration class contains the method/function code for doing Mensuration operations.
+ * Following is the list of operations one can perform using this calculator:
+ * Area of Triangle
+ * Area of Square
+ * Area of Rectangle
+ * Area of Circle
+ * Area of Parallelogram
+ * Area of Rhombus
+ * Area of Trapezium
+ * Perimeter of Triangle
+ * Perimeter of Square
+ * Perimeter of Rectangle
+ * Perimeter of Parallelogram
+ * Circumference of Circle
+ * Volume of Cone
+ * Volume of Cylinder
+ * Volume of Sphere
+ * Volume of Prism
+ * Surface Area of Cylinder
+ * Curved Surface Area of Cone
+ * Surface Area of Sphere
+ * 
+ * 
+ */
+
 class Mensuration
 {
     double AreaTriangle(double bs, double ht)
@@ -73,19 +99,13 @@ class Mensuration
         return per;
     }
     
-    double PerimeterParallelogram(double len, double br)
+    double perRecPlg(double len, double br)         //Calculates perimeter of rectangle, parallelogram.
     {
         double per = 2 * (len + br);
         return per;
     }
     
-    double PerimeterSquare(double side)
-    {
-        double per = 4 * side;
-        return per;
-    }
-    
-    double PerimeterRhombus(double side)
+    double perSqRh(double side)         //Calculates perimeter of square, rhombus.
     {
         double per = 4 * side;
         return per;
