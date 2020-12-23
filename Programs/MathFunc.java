@@ -12,66 +12,67 @@
  * LCM
  * 
  */
-import java.util.*;
+
 class MathFunc
 {
-    int add(int a, int b)      //function for addition of integer numbers
+    
+    public static int add(int num1, int num2)      //function for addition of integer numbers
     {
-        int sum = a + b;
+        int sum = num1 + num2;
         return sum;
     }
     
-    double add(double a, double b)    //function for addition of floating point numbers
+    public static double add(double num1, double num2)    //function for addition of floating point numbers
     {
-        double sum = a + b;
+        double sum = num1 + num2;
         return sum;
     }
     
-    int sub(int a, int b)       //function for subtraction of integer numbers
+    public static int sub(int num1, int num2)       //function for subtraction of integer numbers
     {
         int dif = 0;
-        if(a>b)
-            dif = a - b;
+        if(num1 > num2)
+            dif = num1 - num2;
         else
-            dif = b - a;
+            dif = num2 - num1;
         return dif;
     }
     
-    double sub(double a, double b)   //function for subtraction of floating point numbers
+    public static double sub(double num1, double num2)   //function for subtraction of floating point numbers
     {
         double dif = 0;
-        if(a>b)
-            dif = a - b;
+        if(num1 > num2)
+            dif = num1 - num2;
         else
-            dif = b - a;
+            dif = num2 - num1;
         return dif;
     }
     
-    int multiply(int a, int b)      //function for multiplication of integer number
+    public static int mult(int num1, int num2)      //function for multiplication of integer number
     {
-        int prod = a * b;
+        int prod = num1 * num2;
         return prod;
     }
     
-    double multiply(double a, double b)         //function for multiplication of floating point numbers
+    public static double mult(double num1, double num2)         //function for multiplication of floating point numbers
     {
-        double prod = a * b;
+        double prod = num1 * num2;
         return prod;
     }
     
-    double division(double a, double b)         //function for division of numbers(gives qoutient)
+    public static double div(double num1, double num2)         //function for division of numbers(gives qoutient)
     {
-        double quot = a / b;
+        double quot = num1 / num2;
         return quot;
     }
     
-    int Remainder(int a, int b)         //function for division of numbers(gives remainder)
+    public static int rem(int num1, int num2)         //function for division of numbers(gives remainder)
     {
-        int rem = a % b;
+        int rem = num1 % num2;
         return rem;
     }
     
-    double Power(double num, int p)     //function to calculate powers of numbers
+    public static double power(double num, int p)     //function to calculate powers of numbers
     {
         double power = 1;
         for(int i=1; i<=p; i++)
@@ -81,7 +82,7 @@ class MathFunc
         return power;
     }
     
-    double SquareRoot(int number)       //function to calculate square root of a number
+    public static double sqrt(int number)       //function to calculate square root of a number
     {
     double temp;
     double sqrt = number / 2;
@@ -92,25 +93,15 @@ class MathFunc
     return sqrt;
     }
     
-    int factorial(int num)          //function to calculate the factorial of number
+    public static int fact(int num)          //function to calculate the factorial of number
     {
-        int fact = 1;
-        if (num == 0)
-        {
-            fact = 1;
-        }
+        if (num !=0)
+            return num * fact(num - 1);
         else
-        {
-            while(num > 0)
-            {
-                fact = fact * num;
-                num--;
-            }
-        }
-        return fact;
+            return 1;
     }
     
-    int HCF(int num1,int num2)      //function to calculate HCF of numbers
+    public static int HCF(int num1,int num2)      //function to calculate HCF of numbers
     {
        int temp;
        while(num2 > 0)
@@ -122,7 +113,7 @@ class MathFunc
        return num1; 
     }
     
-    int LCM(int num1, int num2)     //function to calculate LCM of number
+    public static int LCM(int num1, int num2)     //function to calculate LCM of number
     {
         int temp,i=2,res;
         if(num1>num2)
