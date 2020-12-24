@@ -1,6 +1,6 @@
 /**
  * The following Mensuration class contains the method/function code for doing Mensuration operations.
- * Following is the list of operations one can perform using this calculator:
+ * Following is the list of Mensuration operations that can be performed:
  * Area of Triangle
  * Area of Square
  * Area of Rectangle
@@ -26,74 +26,74 @@
 
 class Mensuration
 {
-    double AreaTriangle(double bs, double ht)
+    double arTri(double bs, double ht)         //Calculates area of Triangle.
     {
         double area = (bs * ht)/2;
         return area;
     }
     
-    double AreaTriangle(double s1, double s2, double s3)
+    double arTri(double s1, double s2, double s3)         //Calculates area of Scalene Triangle.
     {
         double SA = (s1 +s2 + s3) / 2;
         double area = Math.sqrt(SA * (SA - s1) * (SA - s2) * (SA - s3));
         return area;
     }
     
-    double AreaTriangle(double side)
+    double arTri(double side)         //Calculates area of Isosceles Triangle.
     {
         double area = (Math.sqrt(3) / 4) * side * side;
         return area;
     }
     
-    double AreaSquare(double side)
+    double arSq(double side)         //Calculates area of Square.
     {
         double area = side * side;
         return area;
     }
     
-    double AreaRectangle(double len, double br)
+    double arRect(double len, double br)         //Calculates area of Rectangle.
     {
         double area = len * br;
         return area;
     }
     
-    double AreaParallelogram(double bs, double ht)
+    double arPlg(double bs, double ht)         //Calculates area of Parallelogram.
     {
         double area = bs * ht;
         return area;
     }
     
-    double AreaTrapezium(double ht, double bs1, double bs2)
+    double arTp(double ht, double bs1, double bs2)         //Calculates area of Trapezium.
     {
         double area = ((bs1 + bs2) / 2) * ht;
         return area;
     }
     
-    double AreaRhombus(double d1, double d2)
+    double arRh(double d1, double d2)          //Calculates area of Rhombus.
     {
         double area = (d1 * d2) / 2;
         return area;
     }
     
-    double AreaCircle(double r)
+    double arCl(double r)         //Calculates area of Circle.
     {
         double area = (22/7) * r * r;
         return area;
     }
     
-    double PerimeterCircle(double r)
+    double perCl(double r)         //Calculates perimeter of Circle
     {
         double per = (2 * 22 * r) / 7;
         return per;
     }
     
-    double PerimeterTriangle(double s1, double s2, double s3)
+    double perTri(double s1, double s2, double s3)         //Calculates perimeter of Scalene Triangle
     {
         double per = s1 + s2 +s3;
         return per;
     }
     
-    double PerimeterTriangle(double side)
+    double perTri(double side)         //Calculates perimeter of Equilateral Triangle
     {
         double per = 3 * side;
         return per;
@@ -111,44 +111,44 @@ class Mensuration
         return per;
     }
     
-    double VolumeCone(double r, double ht)
+    double volCn(double r, double ht)           //Calculates the Volume of Cone
     {
         double vol = (22/7) * r * r * (ht / 3);
         return vol;
     }
     
-    double VolumeCylinder(double r, double ht)
+    double volCy(double r, double ht)           //Calculates the Volume of Cylinder
     {
         double vol = (22/7) * r * r * ht;
         return vol;
     }
     
-    double VolumeSphere(double r)
+    double volSp(double r)           //Calculates the Volume of Sphere
     {
         double vol = (4 / 3) * (22/7) * r * r * r;
         return vol;
     }
     
-    double VolumePrism(double bs1, double bs2, double ht)
+    double volPm(double bs1, double bs2, double ht)           //Calculates the Volume of Prism
     {
         double ArBs = (1 / 2) * bs1 * bs2;
         double vol = ArBs * ht;
         return vol;
     }
     
-    double SACylinder(double r, double ht)
+    double saCy(double r, double ht)           //Calculates the Surface Area of Cylinder
     {
         double SA = 2 * (22 / 7) * r * (r + ht);
         return SA;
     }
     
-    double CSACone(double r, double l)
+    double csaCn(double r, double l)           //Calculates the Surface Area of Cone
     {
         double SA = (22 / 7) * r * l;
         return SA;
     }
     
-    double SASphere(double r)
+    double saSp(double r)           //Calculates the Surface Area of Sphere
     {
         double SA = 4 * (22/7) * r;
         return SA;
