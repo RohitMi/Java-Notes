@@ -1,7 +1,13 @@
-import java.util.*;
-class SpecNum
+/**
+ * The following specNum class contains the method/function code for doing operations to find special types of numbers.
+ * Following is the list of operations that can be performed:
+ * 
+ * 
+ */
+
+class specNum
 {      
-    void EvenCheck(int num)
+    void chkEvn(int num)            //Checks whether a number is Even or Odd.
     {
         if(num % 2 == 0)
             System.out.println("The number " +num+ " is an Even number");
@@ -9,7 +15,7 @@ class SpecNum
             System.out.println("The number " +num+ " is an Odd number");
     }
  
-    void PosNegCheck(int num)
+    void chkPos(int num)            //Checks if the given number is Positive, Negative or Zero.
     {
         if(num == 0)
             System.out.println("The number " +num+ " is Zero");
@@ -19,7 +25,7 @@ class SpecNum
             System.out.println("The number " +num+ " is a Negative number");
     }
 
-    void PrimeCheck(int num)
+    void chkPrm(int num)        //Checks if the given number is Prime number or not.
     {
         boolean isPrime = true;
         for(int i = 2; i < num/2; i++)
@@ -33,7 +39,7 @@ class SpecNum
             System.out.println("The number " +num+ " is not a Prime Number");
     }
     
-    void ArmstrongCheck(int num)
+    void chkArmstrong(int num)          //Checks if the given number is Armstrong number or not.
     {
         int ld, chknum = 0;
         int cop = num;
@@ -49,7 +55,7 @@ class SpecNum
             System.out.println("The number " +cop+ " is not Armstrong");
     }
     
-    void PalindromeCheck(int num)
+    void chkPalindrome(int num)         //Checks if the given number is a Palindrome or not.
     {
         int ld, chknum = 1;
         int cop = num;
@@ -65,11 +71,11 @@ class SpecNum
             System.out.println("The number " +cop+ " is not Palindrome");
     }
     
-    void ArmstrongPrint(int s, int e)
+    void ArmstrongPrint(int s, int e)       //Prints all the Armstrong number between the given range.
     {
         for(int i = s; i<=e; i++)
         {
-            ArmstrongCheck(i);
+            chkArmstrong(i);
         }
     }
 }
