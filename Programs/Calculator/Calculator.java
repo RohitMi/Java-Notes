@@ -18,11 +18,33 @@
 import java.util.Scanner;
 class Calculator                
 {
-    public static void main()
+    public static Scanner in = new Scanner(System.in);
+    void main()
+    {
+        System.out.println("Enter 1 2 3 to Continue");
+        int ch = in.nextInt();
+        
+        switch (ch)
+        {
+            case 1:
+                opMath();
+                break;
+            case 2:
+                opShapes();
+                break;
+            case 3:
+                System.out.println("In development");
+                break;
+            default:
+                System.out.println("Wrong Choice Entered");
+            }
+        
+    }
+    
+    void opMath()
     {   
         int num1, num2;
-        Scanner in = new Scanner(System.in);
-        menu.calMenu();
+        menu.menuMath();
         
         
         char ch = in.next().charAt(0);
@@ -98,6 +120,55 @@ class Calculator
             default:
                 System.out.println("Wrong Choice Entered");
         }
-        in.close();
+        
+    }
+    
+    void opShapes()
+    {
+        int num1, num2;
+        menu.menuShapes();
+        
+        
+        String ch = in.nextLine();
+        
+        switch (ch)
+        {
+            case "Tr":
+                
+                break;
+            case "Sq":
+                
+                break;
+            case "Re":
+                
+                break;
+            case "Pg":
+                
+                break;
+            case "Rh":
+                
+                break;
+            case "Tp":
+                
+                break;
+            case "Ci":
+                
+                break;
+            case "Cy":
+                
+                break;
+            case "Cn":
+                
+                break;
+            case "Sp":
+                
+                break;
+            case "Pm":
+                
+                break;
+            default:
+                System.out.println("Wrong Choice Entered");
+        }
+        
     }
 }

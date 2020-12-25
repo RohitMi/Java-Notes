@@ -1,6 +1,12 @@
 /**
  * The following specNum class contains the method/function code for doing operations to find special types of numbers.
  * Following is the list of operations that can be performed:
+ * Check for Even/Odd Number
+ * Check for Postive/Negative/Zero Number
+ * Check for Prime/Composite Number
+ * Check for Armstrong Number
+ * Check for Palindrome Number
+ * Print Armstrong Number in a range
  * 
  * 
  */
